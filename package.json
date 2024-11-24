@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build:client": "cd ../client && ng build --configuration production",
-    "copy:client-to-server": "cpy '../client/dist/client/browser/**' dist/client --parents",
+    "copy:client-to-server": "cpy '../client/dist/client/browser/**' client-build --parents",
     "prod": "NODE_ENV=production node dist/index.js",
     "dev": "nodemon",
     "build:server": "tsc",

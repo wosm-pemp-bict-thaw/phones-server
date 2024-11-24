@@ -50,7 +50,7 @@ setupSwagger(app);
 
 // Serve Angular static files
 const angularDistPath = isProduction
-  ? path.join(__dirname, 'client')
+  ? path.join(__dirname, '..', 'client-build')
   : path.join(__dirname, '..', '..', 'client', 'dist', 'client', 'browser');
 
 console.log(`Running in ${isProduction ? 'production' : 'development'} mode`);
