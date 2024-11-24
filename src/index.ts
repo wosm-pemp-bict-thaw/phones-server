@@ -9,6 +9,8 @@ import { logger } from './logger';
 import apiRouter from './routes/api/v1';
 import { setupSwagger } from './swagger';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 dotenv.config();
 
 const app = express();
@@ -47,8 +49,13 @@ const authenticate = (req: Request, res: Response, next: NextFunction) => {
 setupSwagger(app);
 
 // Serve Angular static files
-const angularDistPath = path.join(__dirname, '..', '..', 'client', 'dist', 'client', 'browser');
+const angularDistPath = isProduction
+  ? path.join(__dirname, 'dist', 'client')
+  : path.join(__dirname, '..', '..', 'client', 'dist', 'client', 'browser');
+  
+console.log(`Running in ${isProduction ? 'production' : 'development'} mode`);
 console.log('Serving Angular static files from:', angularDistPath);
+
 app.use(express.static(angularDistPath));
 
 // @ts-ignore
