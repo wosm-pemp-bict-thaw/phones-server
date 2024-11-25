@@ -35,7 +35,6 @@ const authenticate = (req: Request, res: Response, next: NextFunction) => {
     const bearerToken = authHeader?.split(' ')[1];
   
     if (!bearerToken) {
-      console.log('HELLOo');
       return res.status(401).json({ error: 'Unauthorized: Token not provided' });
     }
     if (bearerToken !== process.env.AUTH_TOKEN) {
@@ -59,8 +58,8 @@ console.log('Serving Angular static files from:', angularDistPath);
 app.use(express.static(angularDistPath));
 
 // @ts-ignore
-// app.use('/api/v1', authenticate, apiRouter);
-app.use('/api/v1', apiRouter);
+app.use('/api/v1', authenticate, apiRouter);
+// app.use('/api/v1', apiRouter);
 
 // // Serve Angular static files
 // const angularDistPath = path.join(__dirname, '..', '..', 'client', 'dist', 'client');

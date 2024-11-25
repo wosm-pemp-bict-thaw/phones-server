@@ -105,10 +105,10 @@ This project is an Express server built with TypeScript. It includes a GET endpo
 1. **Build the project**
 
    ```bash
-   npm run build
+   npm run build:all
    ```
 
-   This command compiles the TypeScript code into JavaScript in the `dist` directory.
+   This command compiles the TypeScript code into JavaScript in the `dist` directory and use dist from ng from the client folder.
 
 2. **Start the server**
 
@@ -130,16 +130,6 @@ The server includes Swagger UI for interactive API documentation.
 - Visit `http://localhost:3000/api-docs` in your browser to view the API documentation.
 
 ## Design Decisions
-
-### TypeScript
-
-- **Reasoning**: TypeScript provides static typing, which helps catch errors at compile time, enhances code quality, and improves developer productivity.
-- **Benefits**: Strong type definitions, better tooling support, and easier code maintenance.
-
-### Express Framework
-
-- **Reasoning**: Express is a minimalist web framework that is flexible and widely adopted.
-- **Benefits**: Easy to set up, extensive middleware support, and a large community.
 
 ### Environment Configurations
 
