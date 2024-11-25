@@ -1,22 +1,27 @@
 {
-    "dashboard": {
-        "title": "لوحة القيادة",
-        "subtitle": "مرحباً بكم في لوحة القيادة",
-        "numbers_data": {
-            "id": "ID",
-            "number": "رقم",
-            "status": "حالة",
-            "messages": "رسائل",
-            "inactive": "غير نشط",
-            "active": "نشيط"
-        },
-        "ui": {
-            "filter": "التصفية حسب الحالة",
-            "all": "الجميع",
-            "toast": {
-                "statusChanged": "تم تغيير الحالة بنجاح",
-                "success": "نجاح"
-            }
-        }
+  "dashboard": {
+    "title": "لوحة القيادة",
+    "subtitle": "مرحباً بكم في لوحة القيادة",
+    "numbers_data": {
+      "id": "ID",
+      "number": "رقم",
+      "status": "حالة",
+      "messages": "رسائل",
+      "inactive": "غير نشط",
+      "active": "نشيط"
+    },
+    "ui": {
+      "filter": "التصفية حسب الحالة",
+      "all": "الجميع",
+      "toast": {
+        "statusChanged": "تم تغيير الحالة بنجاح",
+        "success": "نجاح"
+      }
     }
+  },
+  "login": {
+    "sign_in": "تسجيل الدخول",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور"
+  }
 }
